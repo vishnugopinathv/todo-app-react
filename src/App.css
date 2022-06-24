@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu&display=swap');
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+}
+body{
+  background-color: rgb(204, 22, 22);
+  font-family: 'Montserrat',sans-serif;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+h1{
+  color:white;
+}
+.modal__container h1{
+  color: black;
+  border-bottom: 2px solid;
+  padding-bottom: 1rem;
+}
+.todo__list{
+display: flex;
+justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo__list .list__container{
+  padding:0 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 20rem;
+}
+.input__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input__container input{
+  width: 20rem;
+  padding:0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+  margin: 0.5rem 0;
+  font-family: 'Ubuntu',sans-serif;
+  outline: none;
+}
+.input__container button{
+  width: 5rem;
+  padding:0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 1px grey solid;
+  background-color: green;
   color: white;
+  font-weight: 600;
+  font-family: 'Montserrat',sans-serif;
 }
-
-.App-link {
-  color: #61dafb;
+.list__item{
+  border: 1px solid;
+  width: 20rem;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: rgb(245, 194, 132);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn__containers button{
+  padding: 0.5rem 0.75rem;
+  margin-right: 1rem;
+  width: 5rem;
+  border-radius: 0.75rem;
+  border:1px solid;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+.btn__containers button:hover{
+  background-color: white;
+}
+.done__btn{
+  background-color: green;
+}
+.delete__btn{
+  background-color: red;
+}
+.edit__btn{
+  background-color: blue;
+}
+.done__btn:hover{
+  color: green;
+}
+.delete__btn:hover{
+  color: red;
+}
+.edit__btn:hover{
+  color: blue;
+}
+.modal__container{
+  border: 1px solid;
+  position: fixed;
+  left: 30%;
+  right: 30%;
+  top: 15rem;
+  padding: 1rem;
+  height: 15rem;
+  background: white;
+}
+.fa-xmark{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: red;
+  font-size: 1.75rem;
+}
+@media (max-width:905px){
+  .todo__list{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .modal__container{
+    left: 12%;
+    right: 12%;
+    top: 10rem;
   }
+}
+@media (max-width:440px){
+  /* .input__container input{
+    width: 75vw;
+  }
+  .list__item{
+    width: 85vw;
+  }
+  .container{
+    width: 100%;
+  } */
 }
