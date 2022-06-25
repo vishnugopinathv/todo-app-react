@@ -30,7 +30,6 @@ const Todolist = ({item,setTodo,todo,heading,setEdit,setEditItem,setInput,comple
             {
               !completed&&<button
               onClick={() => doneTodo(value.id)}
-              
               className="done__btn"
             >
               Done
@@ -38,7 +37,6 @@ const Todolist = ({item,setTodo,todo,heading,setEdit,setEditItem,setInput,comple
             }
             <button
               onClick={() => deleteTodo(value.id)}
-          
               className="delete__btn"
             >
               Delete

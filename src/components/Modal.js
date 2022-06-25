@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Modal = ({task,desc,id,modalHandler}) => {
-    console.log("modal box")
   return (
     <div className='modal__container'>
         <h1>{task}</h1>
